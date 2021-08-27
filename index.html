@@ -14,7 +14,37 @@
 
         </header>
         <section>
+            <div>
+                <label for="menssagem">Escreva o que deseja codificar ou decodificar: </label>
+                <textarea name="O que você criptografar/decriptografar?" id="menssagem" cols="22" rows="10"></textarea>
+            </div>
+            <p>Voce quer criptografar ou decriptografar?</p>
 
+            <div>
+              <input type="radio" id="cripto" name="seleciona" value="cripto">
+              <label for="cripto">Criptografar</label>
+            </div>
+            
+            <div>
+              <input type="radio" id="decripto" name="seleciona" value="decripto">
+              <label for="Decripto">Decriptografar</label>
+            </div>
+
+            <p>Qual método de criptografia você quer?</p>
+
+            <div>
+              <input type="radio" id="met1" name="metodo" value="met1">
+              <label for="met1">Cifra de César</label>
+            </div>
+            
+            <div>
+              <input type="radio" id="met2" name="metodo" value="met2">
+              <label for="met2">Base64</label>
+            </div>
+            
+            <div class="botao">
+                <button type="submit">Enviar</button>
+            </div>
         </section>
         <footer>
             
