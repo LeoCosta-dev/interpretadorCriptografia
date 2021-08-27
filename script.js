@@ -1,7 +1,7 @@
 /*.charCodeAt() - transforma letra em número da tabela ascii
 String.fromCharCode(b) - faz o inverso do de cima */
-var mensagem = "eu amo paçoca"
-var incremento = 2
+var mensagem 
+var incremento 
 
 function cifrado(){
     var mensagemArr = mensagem.split('')
@@ -37,5 +37,21 @@ function decifrado(){
         mensagemCifrada.push(String.fromCharCode(codificadorArr[j]))
     }
     return mensagemCifrada.join('')
+
+}
+
+// motor para utilizar base64
+
+function codificador(){
+    var mensagemCodificada = btoa(mensagem)
+    
+    return mensagemCodificada
+
+}
+
+function decodifica(){
+    var mensagemCodificada = atob(mensagem)
+    
+    return mensagemCodificada
 
 }
