@@ -9,11 +9,11 @@ var incremento  //apenas Number
 
 
 function cifrado(){
-    var mensagemArr = mensagem.split('')
-    var mensagemCifrada = []
-    var codificadorArr = []
+    let mensagemArr = mensagem.split('')
+    let mensagemCifrada = []
+    let codificadorArr = []
     
-    for (var i = 0; mensagemArr.length > i; i++){
+    for (let i = 0; mensagemArr.length > i; i++){
         if (mensagemArr[i].charCodeAt() >= 65 && mensagemArr[i].charCodeAt() <=90 ){
             let teste = (((mensagemArr[i].charCodeAt()) -65 + incremento)%26)
             codificadorArr.push(teste+65)
@@ -27,18 +27,18 @@ function cifrado(){
             console.log("cheguei")
         }
     }
-    for (var j = 0; codificadorArr.length > j; j++){
+    for (let j = 0; codificadorArr.length > j; j++){
         mensagemCifrada.push(String.fromCharCode(codificadorArr[j]))
     }
     return mensagemCifrada.join('')
 
 }
 function decifrado(){
-    var mensagemArr = mensagem.split('')
-    var mensagemCifrada = []
-    var codificadorArr = []
+    let mensagemArr = mensagem.split('')
+    let mensagemCifrada = []
+    let codificadorArr = []
     
-    for (var i = 0; mensagemArr.length > i; i++){
+    for (let i = 0; mensagemArr.length > i; i++){
         if (mensagemArr[i].charCodeAt() >= 65 && mensagemArr[i].charCodeAt() <=90 ){
             let teste = (((mensagemArr[i].charCodeAt()) -65 - incremento)%26)
             codificadorArr.push((teste < 0?teste+26:teste)+65)
@@ -52,7 +52,7 @@ function decifrado(){
             console.log("cheguei")
         }
     }
-    for (var j = 0; codificadorArr.length > j; j++){
+    for (let j = 0; codificadorArr.length > j; j++){
         mensagemCifrada.push(String.fromCharCode(codificadorArr[j]))
     }
     return mensagemCifrada.join('')
@@ -62,14 +62,14 @@ function decifrado(){
 // motor para utilizar base64
 
 function codificador(){
-    var mensagemCodificada = btoa(mensagem)
+    let mensagemCodificada = btoa(mensagem)
     
     return mensagemCodificada
 
 }
 
 function decodifica(){
-    var mensagemCodificada = atob(mensagem)
+    let mensagemCodificada = atob(mensagem)
     
     return mensagemCodificada
 
