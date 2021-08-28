@@ -16,7 +16,7 @@
         <section>
             <div>
                 <label for="menssagem">Escreva o que deseja codificar ou decodificar: </label>
-                <textarea name="O que você criptografar/decriptografar?" id="menssagem" cols="22" rows="10"></textarea>
+                <textarea name="O que você criptografar/decriptografar?" id="menssagem" cols="22" rows="10" pattern="([aA-zZ]+)"></textarea>
             </div>
             <p>Voce quer criptografar ou decriptografar?</p>
 
@@ -34,16 +34,16 @@
 
             <div>
               <input type="radio" id="met1" name="metodo" value="met1">
-              <label for="met1">Cifra de César</label>
+              <label for="met1">Cifra de César. (Não aceita números ou caractéres especiais)</label>
             </div>
             
             <div>
               <input type="radio" id="met2" name="metodo" value="met2">
-              <label for="met2">Base64</label>
+              <label for="met2">Base64.</label>
             </div>
             
             <div class="botao">
-                <button type="submit">Enviar</button>
+                <button type="submit" id="enviar">Enviar</button>
             </div>
         </section>
         <footer>
