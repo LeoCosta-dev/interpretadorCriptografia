@@ -1,13 +1,12 @@
-/*.charCodeAt() - transforma letra em número da tabela ascii
+//.charCodeAt() - transforma letra em número da tabela ascii
+//String.fromCharCode(b) - faz o inverso do de cima
+//de 97 até 122 são as minusculas
+//de 65 até 90 maiusculas
 
-String.fromCharCode(b) - faz o inverso do de cima
-
-de 97 até 122 são as minusculas
-de 65 até 90 maiusculas*/
 var mensagem //apenas de a-z
 var incremento  //apenas Number
 
-
+// motor para Cifra de César
 function cifrado(){
     let mensagemArr = mensagem.split('')
     let mensagemCifrada = []
@@ -74,5 +73,3 @@ function decodifica(){
     return mensagemCodificada
 
 }
-
-//valorConta = resulta>=0?oQueEujaTenho:resulta * (-1)
