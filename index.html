@@ -14,37 +14,43 @@
 
         </header>
         <section>
-            <div>
-                <label for="menssagem">Escreva o que deseja codificar ou decodificar: </label>
-                <textarea name="O que você criptografar/decriptografar?" id="menssagem" cols="22" rows="10" pattern="([aA-zZ]+)"></textarea>
-            </div>
-            <p>Voce quer criptografar ou decriptografar?</p>
+          <div id="escolherMetodo">
+            <h2>Escolha o seu método:</h2>
+            <select name="seletor" id="options">
+              <option>SELECIONE</option>
+              <option value="true">CIFRA DE CÉSAR</option>
+              <option value="false">BASE64</option>
+            </select>
+          </div>
 
-            <div>
-              <input type="radio" id="cripto" name="seleciona" value="cripto">
-              <label for="cripto">Criptografar</label>
-            </div>
-            
-            <div>
-              <input type="radio" id="decripto" name="seleciona" value="decripto">
-              <label for="Decripto">Decriptografar</label>
+          <div id="escolherCripDecrip">
+            <input  type = "radio" id = "met1" name = "metodo" value = "met1">
+            <label  for = "met1">Criptografar</label>
+            <input  type = "radio" id = "met2" name = "metodo" value = "met2">
+            <label  for = "met2">Decriptografar</label>
+          </div>
+
+          <div id="entradaTexto">
+            <h3>Digite seu texto</h3>
+            <input type="text" name="entrada" id="entradas">
+          </div>
+
+          <div id="cifra">
+            <p>Selecione valor da chave de criptografia:</p>
+            <input type="number" name="acressimo" id="acrecentar">
+
+            <p>Resultado:</p>
+            <div id="cifraBox">
+              <p id="resultadoCifra"></p>
             </div>
 
-            <p>Qual método de criptografia você quer?</p>
-
-            <div>
-              <input type="radio" id="met1" name="metodo" value="met1">
-              <label for="met1">Cifra de César. (Não aceita números ou caractéres especiais)</label>
-            </div>
-            
-            <div>
-              <input type="radio" id="met2" name="metodo" value="met2">
-              <label for="met2">Base64.</label>
-            </div>
-            
-            <div class="botao">
-                <button type="submit" id="enviar">Enviar</button>
-            </div>
+          </div>
+          <div id="base">
+            <p>Resultado:</p>
+              <div id="baseBox">
+                <p id="resultadoBase"></p>
+              </div>
+          </div>
         </section>
         <footer>
             
