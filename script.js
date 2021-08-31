@@ -6,7 +6,11 @@
 // atribuição das variáveis globais
 
 var mensagem // guarda a mensagem passada pelo usuário
+mensagem = document.getElementById(entradas)
+mensagem = mensagem.value
 var incremento  // apenas Number, guarda a chave para cifra de César
+incremento = document.getElementById(adiciona)
+incremento = incremento.value
 var retornoMensagem // retorna mensagem criptografada ou decriptografada
 var metodo // guarda o metodo escolhido pelo usuário
 var cripDecrip // guarda a ação desejada pelo usuário
