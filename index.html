@@ -16,17 +16,16 @@
         <section>
           <div id="escolherMetodo">
             <h2>Escolha o seu método:</h2>
-            <select name="seletor" id="options">
-              <option>SELECIONE</option>
-              <option value="true">CIFRA DE CÉSAR</option>
-              <option value="false">BASE64</option>
-            </select>
+            <input  type = "radio" id = "metCript1" name = "metodoCripto" value = "1">
+            <label  for = "met1">Cifra de cesar</label>
+            <input  type = "radio" id = "metCript2" name = "metodoCripto" value = "2">
+            <label  for = "met2">Base64</label>
           </div>
 
           <div id="escolherCripDecrip">
-            <input  type = "radio" id = "met1" name = "metodo" value = "met1">
+            <input  type = "radio" id = "met1" name = "metodo" value = "true">
             <label  for = "met1">Criptografar</label>
-            <input  type = "radio" id = "met2" name = "metodo" value = "met2">
+            <input  type = "radio" id = "met2" name = "metodo" value = "true">
             <label  for = "met2">Decriptografar</label>
           </div>
 

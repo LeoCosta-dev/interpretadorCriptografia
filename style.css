@@ -44,6 +44,9 @@ section{
     border: black solid 5px;
 
 }
+#cifra , #base{
+    display:none
+}
 #resultadoCifra, #resultadoBase{
     width: 80%;
     height: 200px;
