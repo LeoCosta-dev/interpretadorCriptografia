@@ -6,14 +6,21 @@
 // atribuição das variáveis globais
 
 var mensagem // guarda a mensagem passada pelo usuário
-mensagem = document.getElementById(entradas)
-mensagem = mensagem.value
+mensagem = document.getElementById('entradas')
 var incremento  // apenas Number, guarda a chave para cifra de César
-incremento = document.getElementById(adiciona)
-incremento = incremento.value
+incremento = document.getElementById('adiciona')
 var retornoMensagem // retorna mensagem criptografada ou decriptografada
 var metodo // guarda o metodo escolhido pelo usuário
 var cripDecrip // guarda a ação desejada pelo usuário
+
+mensagem.onkeyup = function(){
+    console.log("passei")
+    mensagem = mensagem.value
+    let msgCode = codificador()
+    retornoMensagem = document.getElementById('resultadoBase')
+    retornoMensagem.value =codificador()
+    return
+}
 
 // motor para Cifra de César
 function cifrado(){
@@ -25,14 +32,11 @@ function cifrado(){
         if (mensagemArr[i].charCodeAt() >= 65 && mensagemArr[i].charCodeAt() <=90 ){
             let teste = ((mensagemArr[i].charCodeAt()) -65 + incremento)%26
             codificadorArr.push(teste+65)
-            console.log("cheguei")
         }else if(mensagemArr[i].charCodeAt() >= 97 && mensagemArr[i].charCodeAt() <=122){
             let teste = ((mensagemArr[i].charCodeAt()) -97 + incremento)%26
             codificadorArr.push(teste+97)
-            console.log("cheguei")
         }else{
             codificadorArr.push(mensagemArr[i].charCodeAt())
-            console.log("cheguei")
         }
     }
     for (let j = 0; codificadorArr.length > j; j++){
@@ -50,14 +54,11 @@ function decifrado(){
         if (mensagemArr[i].charCodeAt() >= 65 && mensagemArr[i].charCodeAt() <=90 ){
             let teste = ((mensagemArr[i].charCodeAt()) -65 - incremento)%26
             codificadorArr.push((teste < 0?teste+26:teste)+65)
-            console.log("cheguei")
         }else if(mensagemArr[i].charCodeAt() >= 97 && mensagemArr[i].charCodeAt() <=122){
             let teste = ((mensagemArr[i].charCodeAt()) -97 - incremento)%26
             codificadorArr.push((teste < 0?teste+26:teste)+97)
-            console.log("cheguei")
         }else{
             codificadorArr.push(mensagemArr[i].charCodeAt())
-            console.log("cheguei")
         }
     }
     for (let j = 0; codificadorArr.length > j; j++){
