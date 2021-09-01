@@ -10,42 +10,44 @@ var mensagem
 var input = document.getElementById('entradas')
 // retorna mensagem criptografada ou decriptografada
 var incremento
+var selecionado = document.getElementById('escolherMetodo')
 
 //Eventos
 document.getElementById('enviar').onclick = function(){
     mensagem = input.value
-    let cifra = document.getElementById('cesar')
-    let base = document.getElementById('metCript2')
     let cripto = document.getElementById('cripto') , decripto = document.getElementById('met2')
     if(cripto.checked){
-        if(cifra.checked){
+        if(selecionado.value == 1){
             incremento = parseInt(document.getElementById('adiciona').value)
             document.getElementById('resultadoCifra').innerText = cifrado()
-        }else if(base.checked){
+        }else if(selecionado.value == 2){
             document.getElementById('resultadoBase').innerText = codificador()
         }
     }else if(decripto.checked){
-        if(cifra.checked){
+        if(selecionado.value == 1){
             incremento = parseInt(document.getElementById('adiciona').value)
             document.getElementById('resultadoCifra').innerText = decifrado()
-        }else if(base.checked){
+        }else if(selecionado.value == 2){
             document.getElementById('resultadoBase').innerText = decodificado()
         }
     }
 }
 
 document.getElementById('escolherMetodo').onclick = function(){
-    let selecionado = document.getElementById('cesar')
-    if(selecionado.checked){
+    if(selecionado.value == 1){
         document.getElementById('cifra').style.display = 'flex'
         document.getElementById('base').style.display = 'none'
         document.querySelector("body").style.backgroundImage = 'url(image/destinations-rome-banner-mobile-1024x553.jpg)'
         
-    }else if(document.getElementById('metCript2').checked){
+    }else if(selecionado.value == 2){
         document.getElementById('base').style.display = 'flex'
         document.getElementById('cifra').style.display = 'none'
         document.querySelector("body").style.backgroundImage = 'url(image/MASTER-IMAGE-64bits-800x450.jpg)'
         
+    }else if(selecionado.value == 0){
+        document.getElementById('base').style.display = 'none'
+        document.getElementById('cifra').style.display = 'none'
+        document.querySelector("body").style.backgroundImage = 'url(image/o-que-e-criptografia-de-ponta-a-ponta.jpg)'
     }
 }
 

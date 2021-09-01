@@ -15,12 +15,13 @@
         </header>
         <section>
           <h3>Escolha o seu método:</h3>
-          <div id="escolherMetodo">
-            <input  type = "radio" id = "cesar" name = "metodoCripto" value = "1">
-            <label  for = "met1">Cifra de cesar</label>
-            <input  type = "radio" id = "metCript2" name = "metodoCripto" value = "2">
-            <label  for = "met2">Base64</label>
-          </div>
+          <select id="escolherMetodo">
+            <option value="0">Selecione</option>
+            <option value = "1">
+            Cifra de cesar</option>
+            <option value = "2">
+            Base64</option>
+          </select>
           <h3>Escolha se quer criptografar ou descriptografar:</h3>
           <div id="escolherCripDecrip">
             <input  type = "radio" id = "cripto" name = "metodo" value = "true">
