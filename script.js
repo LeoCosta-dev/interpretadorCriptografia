@@ -19,14 +19,14 @@ document.getElementById('enviar').onclick = function(){
     let cripto = document.getElementById('cripto') , decripto = document.getElementById('met2')
     if(cripto.checked){
         if(cifra.checked){
-            incremento = document.getElementById('adiciona').value
+            incremento = parseInt(document.getElementById('adiciona').value)
             document.getElementById('resultadoCifra').innerText = cifrado()
         }else if(base.checked){
             document.getElementById('resultadoBase').innerText = codificador()
         }
     }else if(decripto.checked){
         if(cifra.checked){
-            incremento = document.getElementById('adiciona').value
+            incremento = parseInt(document.getElementById('adiciona').value)
             document.getElementById('resultadoCifra').innerText = decifrado()
         }else if(base.checked){
             document.getElementById('resultadoBase').innerText = decodificado()
