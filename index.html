@@ -14,14 +14,14 @@
 
         </header>
         <section>
+          <h3>Escolha o seu método:</h3>
           <div id="escolherMetodo">
-            <h2>Escolha o seu método:</h2>
             <input  type = "radio" id = "cesar" name = "metodoCripto" value = "1">
             <label  for = "met1">Cifra de cesar</label>
             <input  type = "radio" id = "metCript2" name = "metodoCripto" value = "2">
             <label  for = "met2">Base64</label>
           </div>
-
+          <h3>Escolha se quer criptografar ou descriptografar:</h3>
           <div id="escolherCripDecrip">
             <input  type = "radio" id = "cripto" name = "metodo" value = "true">
             <label  for = "met1">Criptografar</label>
@@ -33,12 +33,11 @@
             <h3>Digite seu texto</h3>
             <input type="text" name="entrada" id="entradas">
           </div>
-          <button id="enviar">envia</button>
-
+          
           <div id="cifra">
-            <p>Selecione valor da chave de criptografia:</p>
+            <h3>Selecione valor da chave de criptografia:</h3>
             <input type="number" name="adicao" id="adiciona" min="1">
-
+            
             <p>Resultado:</p>
             <div id="cifraBox">
               <output type="text" id="resultadoCifra"></output>
@@ -50,9 +49,10 @@
               <div id="baseBox">
                 <output id = "resultadoBase" type = "text"></output>
               </div>
-          </div>
-        </section>
-        <footer>
+            </div>
+            <button id="enviar">Enviar</button>
+          </section>
+          <footer>
             
         </footer>
     </div>

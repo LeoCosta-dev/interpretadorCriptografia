@@ -39,9 +39,13 @@ document.getElementById('escolherMetodo').onclick = function(){
     if(selecionado.checked){
         document.getElementById('cifra').style.display = 'flex'
         document.getElementById('base').style.display = 'none'
+        document.querySelector("body").style.backgroundImage = 'url(image/destinations-rome-banner-mobile-1024x553.jpg)'
+        
     }else if(document.getElementById('metCript2').checked){
         document.getElementById('base').style.display = 'flex'
         document.getElementById('cifra').style.display = 'none'
+        document.querySelector("body").style.backgroundImage = 'url(image/MASTER-IMAGE-64bits-800x450.jpg)'
+        
     }
 }
 
