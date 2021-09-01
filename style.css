@@ -1,11 +1,13 @@
 /* Configurações de Layouts básicos da aplicação */
 body{
     display: flex;
+    flex-direction: column;
     color: blanchedalmond;
     justify-content: center;
+    align-items: center;
     background-image: url(image/o-que-e-criptografia-de-ponta-a-ponta.jpg);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .container{
@@ -19,6 +21,10 @@ body{
     max-width: 80%;
     width: 100%;
     height: max-content;
+}
+#cabecalho{
+    height: 200px;
+    margin-top: 10px;
 }
 section{
     display: flex;
@@ -84,8 +90,23 @@ button{
     border-radius: 5px;
     width: 60%;
     margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 30px;
 }
 p, input, output, label{
     font-size: 20px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0, 0.6);
+    border: rgb(97, 96, 96) solid 3px;
+    border-radius: 10px;
+    justify-content: space-between;
+    justify-self: flex-end;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    text-shadow: rgb(8, 8, 8) 2px 1px;
+    margin: 20px;
+    padding: 5px;
 }
