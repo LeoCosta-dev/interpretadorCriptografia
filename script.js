@@ -51,7 +51,6 @@ document.getElementById('escolherMetodo').onclick = function(){
     }
 }
 
-
 // motor para Cifra de César
 function cifrado() {
     let mensagemArr = mensagem.split('')
