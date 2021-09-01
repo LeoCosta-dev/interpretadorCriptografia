@@ -6,29 +6,45 @@
 // atribuição das variáveis globais
 
 // guarda a mensagem passada pelo usuário
-var mensagem = document.getElementById('entradas')
-
-// apenas Number, guarda a chave para cifra de César
-var incremento = document.getElementById('adiciona')
-
+var mensagem
+var input = document.getElementById('entradas')
 // retorna mensagem criptografada ou decriptografada
-var retornoMensagem 
+var incremento
 
-// guarda o metodo escolhido pelo usuário
-var metodo 
-
-// guarda a ação desejada pelo usuário
-var cripDecrip 
-
-
-mensagem.onkeyup = function () {
-    console.log("passei")
-    mensagem = mensagem.value
-    let msgCode = codificador()
-    retornoMensagem = document.getElementById('resultadoBase')
-    retornoMensagem.value = codificador()
-    return
+//Eventos
+document.getElementById('enviar').onclick = function(){
+    mensagem = input.value
+    let cifra = document.getElementById('cesar')
+    let base = document.getElementById('metCript2')
+    let cripto = document.getElementById('cripto') , decripto = document.getElementById('met2')
+    if(cripto.checked){
+        if(cifra.checked){
+            incremento = document.getElementById('adiciona').value
+            document.getElementById('resultadoCifra').innerText = cifrado()
+        }else if(base.checked){
+            document.getElementById('resultadoBase').innerText = codificador()
+        }
+    }else if(decripto.checked){
+        if(cifra.checked){
+            incremento = document.getElementById('adiciona').value
+            document.getElementById('resultadoCifra').innerText = decifrado()
+        }else if(base.checked){
+            document.getElementById('resultadoBase').innerText = decodificado()
+        }
+    }
 }
+
+document.getElementById('escolherMetodo').onclick = function(){
+    let selecionado = document.getElementById('cesar')
+    if(selecionado.checked){
+        document.getElementById('cifra').style.display = 'flex'
+        document.getElementById('base').style.display = 'none'
+    }else if(document.getElementById('metCript2').checked){
+        document.getElementById('base').style.display = 'flex'
+        document.getElementById('cifra').style.display = 'none'
+    }
+}
+
 
 // motor para Cifra de César
 function cifrado() {
@@ -85,7 +101,7 @@ function codificador() {
 
 }
 
-function decodifica() {
+function decodificado() {
     let mensagemCodificada = atob(mensagem)
 
     return mensagemCodificada
